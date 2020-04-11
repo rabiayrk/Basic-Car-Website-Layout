@@ -1,0 +1,19 @@
+{
+  "name": "arabasitesiprojesi",
+  "version": "1.0.0",
+  "description": "This is a \"Web Development Course\" project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rabia Yörük",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.0.0",
+    "popper.js": "^1.12.9"
+  }
+}
