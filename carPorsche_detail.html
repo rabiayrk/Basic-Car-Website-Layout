@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+     <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+ 
+    <!--  Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Her Sorunuzda Araban Yanınızda!</title>
+
+</head>
+
+<body>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
+
+  <a class="navbar-brand" href="#">
+    <img src="./img/arabaLogo.PNG" height="50" weight="140" alt="navbar_logo">
+  </a>  
+ 
+    <!-- Links -->
+  <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="./index.html">Anasayfa</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./cars.html">Tüm Araba İlanları</a>
+        <span class="sr-only">(current)</span>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#carModal">Araç Sat</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="cars.html">Araç Kirala</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#serviceModal">Servis Talebi Oluştur</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="./contact.html">İletişim             
+          </a>
+      </li>
+  </ul>
+
+        <!-- Links -->
+  <form class="form-inline my-2 my-lg-0 mx-auto">
+    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Search</button>
+  </form>
+
+          <!-- Links -->
+          <ul class="navbar-nav">
+              <li class="nav-item sign">
+                <button class="btn btn-block btn-warning nav-link" type="submit" data-toggle="modal" data-target="#loginModal">Giriş Yap</button>
+              </li>
+              <li class="nav-item sign">
+                <button class="btn btn-block btn-info nav-link" type="submit" data-toggle="modal" data-target="#signUpModal">Üye Ol</button>
+              </li>
+            </ul>
+
+</nav>
+<!--/.Navbar-->
+
+
+    <!--/Giriş Yap Modeli-->
+    <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Giriş Yap</h4>
+                    <button class="close" type="button" data-dismiss="modal" &times;></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <input type="email" class="form-control form-control-sm mr-1" placeholder="E-Mail">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="password" class="form-control form-control-sm mr-1" placeholder="Şifre">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Beni Hatırla
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Vazgeç</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Giriş Yap</button>        
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!--/Üye Ol Modeli-->
+   <div class="modal fade" id="signUpModal" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">Ücretsiz Üyelik</h4>
+                <button class="close" type="button" data-dismiss="modal" &times;></button>
+            </div>
+
+            <div class="modal-body">
+
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-sm-4">
+                          <input type="name" class="form-control form-control-sm mr-1" placeholder="Ad">
+                        </div>
+                        <div class="form-group col-sm-4">
+                          <input type="surname" class="form-control form-control-sm mr-1" placeholder="Soyad">
+                        </div>
+                        <div class="form-group col-sm-4">
+                                <input type="email" class="form-control form-control-sm mr-1" placeholder="E-Mail">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <input type="password" class="form-control form-control-sm mr-1" placeholder="Şifre">
+                        </div>
+                        <div class="form-group col-sm-6">
+                          <input type="password" class="form-control form-control-sm mr-1" placeholder="Şifre Doğrulaması">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                        <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Vazgeç</button>
+                        <button type="submit" class="btn btn-primary btn-sm ml-1">Üye Ol</button>        
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--/Servis Talebi Modeli-->
+   <div class="modal fade" id="serviceModal" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">Servis Talebi Oluşturun</h4>
+                <button class="close" type="button" data-dismiss="modal" &times;></button>
+            </div>
+
+            <div class="modal-body">
+
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-sm-4">
+                          <input type="name" class="form-control form-control-sm mr-1" placeholder="Ad">
+                        </div>
+                        <div class="form-group col-sm-4">
+                          <input type="surname" class="form-control form-control-sm mr-1" placeholder="Soyad">
+                        </div>
+                        <div class="form-group col-sm-4">
+                                <input type="email" class="form-control form-control-sm mr-1" placeholder="Araba Modeli">
+                        </div>
+                        <div class="form-group col-sm-6">
+                          <input type="tel" class="form-control form-control-sm mr-1" placeholder="İletişim Bilginiz">
+                        </div>
+                        <div class="form-group col-sm-6">
+                          <input type="address" class="form-control form-control-sm mr-1" placeholder="Adres Bilgisi">
+                        </div>
+                        <div class="form-group col-12">
+                          <div class="col-md-12">
+                            <label class="col-md-2 col-form-label" for="feedback">Mesajınız </label>
+                            <textarea class="form-control" id="feedback" name="feedback" rows="12">
+                            </textarea>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Vazgeç</button>
+                        <button type="submit" class="btn btn-primary btn-sm ml-1">Gönder</button>        
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--/Servis Talebi Modeli-->
+<div class="modal fade" id="carModal" role="dialog">
+  <div class="modal-dialog modal-lg" role="content">
+      <div class="modal-content">
+
+          <div class="modal-header">
+              <h4 class="modal-title">Araç Satın</h4>
+              <button class="close" type="button" data-dismiss="modal" &times;></button>
+          </div>
+
+          <div class="modal-body">
+
+              <form>
+                  <div class="form-row">
+                      <div class="form-group col-sm-4">
+                        <input type="name" class="form-control form-control-sm mr-1" placeholder="Ad">
+                      </div>
+                      <div class="form-group col-sm-4">
+                        <input type="surname" class="form-control form-control-sm mr-1" placeholder="Soyad">
+                      </div>
+                      <div class="form-group col-sm-4">
+                              <input type="car info" class="form-control form-control-sm mr-1" placeholder="Araba Modeli">
+                      </div>
+                      <div class="form-group col-sm-4">
+                        <input type="price" class="form-control form-control-sm mr-1" placeholder="Araba Fiyatı">
+                      </div>
+                      <div class="col-sm-auto">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label"> Pazarlık Payı Vardır
+                            </label>
+                        </div>
+                    </div>
+                      <div class="form-group col-12">
+                        <div class="col-md-12">
+                          <label class="col-md-2 col-form-label" for="feedback">Açıklama </label>
+                          <textarea class="form-control" id="feedback" name="feedback" rows="12">
+                          </textarea>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Vazgeç</button>
+                      <button type="submit" class="btn btn-primary btn-sm ml-1">Yayınla</button>        
+                  </div>
+              </form>
+
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Car Detail -->
+
+
+<div class="container">
+
+  <div class="row" style="padding-top:70px ;">
+      <div class="col-12">
+         <h2>Araba Detayları</h2>
+         <hr>
+      </div>
+  </div>
+
+  <div class="row row-content">
+
+      <div class="col-12 col-sm-6">
+          <img src="./img/porche.jpg" alt="car" weight="700" height="300">
+
+      </div>
+
+      <div class="col-12 col-sm-6">
+        <div class="card">
+            <h3 class="card-header bg-primary text-white">Porsche Cayenne</h3>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-6">Yayın Tarihi</dt>
+                    <dd class="col-6">12 Nisan 2020</dd>
+
+                    <dt class="col-6">İletişim Numarası</dt>
+                    <dd class="col-6">0531 684 34 34</dd>
+
+                    <dt class="col-6">Açıklama</dt>
+                    <dd class="col-6">Five doors that are open to any adventure. With a dynamic design and efficient turbocharged engines. With outstanding digital connectivity that brings the whole world into the cockpit. With versatility, quality and cutting-edge assistance systems, offering both driver and passengers extraordinary comfort.</dd>
+
+                    <dt class="col-6">Fiyatı</dt>
+                    <dd class="col-6"> 2.100.000 TL </dd>
+
+                    <dt class="col-6">Özellikleri</dt>
+                    <dd class="col-6">Motor	1.5L B38A15T0 turbo I3<br>
+                      7.1 kWh lityum iyon pil<br>
+                      6 ileri otomatik şanzıman</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">   
+
+            <div class="col-4 offset-1 col-sm-2">
+                <h5>İlgili Linkler</h5>
+                <ul class="list-unstyled">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./cars.html">Tüm Araç İLanları</a></li>
+                    <li><a href="./contact.html">İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="col-7 col-sm-5">
+                <h5>Bize Ulaşın</h5>
+                <address>
+                  Ataşehir<br>
+                  İstanbul<br>
+                  Türkiye<br>
+                  <i class="fa fa-phone fa-lg"></i>  Tel.: +852 1234 5678<br>
+                  <i class="fa fa-fax fa-lg"></i>  Fax: +852 8765 4321<br>
+                  <i class="fa fa-envelope fa-lg"></i>  Email:  <a href="mailto:info@arabanyanında.com">info@arabanyanında.com</a>
+               </address>
+            </div>
+
+            <div class="col-12 col-sm-4 align-self-center">
+                <div class="text-center">
+                    <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+                    <a class="btn btn-social-icon" href="mailto:info@arabanyanında.com"><i class="fa fa-envelope fa-lg"></i></a>
+                </div>
+            </div>
+
+       </div>
+       <div class="row justify-content-center">             
+            <div class="col-auto">
+                <p>© Copyright 2018 Arabanyanında.com</p>
+            </div>
+       </div>
+    </div>
+</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+ $(document).ready(function(){
+
+    $('[data-toggle="tooltip"]').tooltip();
+
+ });
+</script>
+
+
+</body>
+
+</html>
