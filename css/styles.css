@@ -76,3 +76,23 @@ h3 {
     padding: 2px;
     margin:2px;
 }
+
+.kayan-yazi {
+    margin-top: 3em;
+    background-color: rgb(187, 0, 0);
+    color: white;
+    border-radius: 1em;
+}
+
+#yazi {
+    padding-left: 15em; 
+ }
+
+.top-button-contaier {
+    margin:30px;
+}
+
+.top-btn {
+    padding-left: 50px;
+    padding-right: 50px;
+}

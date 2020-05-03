@@ -50,11 +50,12 @@
       </li>
   </ul>
 
-        <!-- Links -->
-  <form class="form-inline my-2 my-lg-0 mx-auto">
-    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Search</button>
-  </form>
+<!-- Links-->
+<form id="degerkontrol" action="http://www.arabaservisi.web.tr/" class="form-inline my-2 my-lg-0 mx-auto">
+  <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="kelime" id="kelime">
+  <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit" onclick="return searchControl();">Search</button>
+  <span id="sonuc" style="color:whitesmoke"></span>
+</form>
 
           <!-- Links -->
           <ul class="navbar-nav">
@@ -72,42 +73,43 @@
 
     <!--/Giriş Yap Modeli-->
     <div class="modal fade" id="loginModal" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
-            <div class="modal-content">
+      <div class="modal-dialog modal-lg" role="content">
+          <div class="modal-content">
 
-                <div class="modal-header">
-                    <h4 class="modal-title">Giriş Yap</h4>
-                    <button class="close" type="button" data-dismiss="modal" &times;></button>
-                </div>
+              <div class="modal-header">
+                  <h4 class="modal-title">Giriş Yap</h4>
+                  <button class="close" type="button" data-dismiss="modal" &times;></button>
+              </div>
 
-                <div class="modal-body">
+              <div class="modal-body">
 
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-sm-4">
-                                    <input type="email" class="form-control form-control-sm mr-1" placeholder="E-Mail">
-                            </div>
-                            <div class="form-group col-sm-4">
-                                <input type="password" class="form-control form-control-sm mr-1" placeholder="Şifre">
-                            </div>
-                            <div class="col-sm-auto">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> Beni Hatırla
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Vazgeç</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Giriş Yap</button>        
-                        </div>
-                    </form>
+                  <form>
+                      <div class="form-row">
+                          <div class="form-group col-sm-4">
+                                  <input type="email" class="form-control form-control-sm mr-1" id="gırısyapemail" placeholder="E-Mail">
+                          </div>
+                          <div class="form-group col-sm-4">
+                              <input type="password" class="form-control form-control-sm mr-1" id="gırısyappass" placeholder="Şifre">
+                          </div>
+                          <div class="col-sm-auto">
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox">
+                                  <label class="form-check-label"> Beni Hatırla
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-row">
+                          <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Vazgeç</button>
+                          <button type="submit" class="btn btn-primary btn-sm ml-1" onclick="loginFormControl()">Giriş Yap</button>        
+                      </div>
+                  </form>
 
-                </div>
-            </div>
-        </div>
-    </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
 
    <!--/Üye Ol Modeli-->
    <div class="modal fade" id="signUpModal" role="dialog">
@@ -141,7 +143,7 @@
                     </div>
                     <div class="form-row">
                         <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Vazgeç</button>
-                        <button type="submit" class="btn btn-primary btn-sm ml-1">Üye Ol</button>        
+                        <button type="submit" class="btn btn-primary btn-sm ml-1" onclick="uyeOl()">Üye Ol</button>        
                     </div>
                 </form>
 
@@ -358,6 +360,7 @@
 
  });
 </script>
+<script src="js/functions.js"></script>
 
 
 </body>
