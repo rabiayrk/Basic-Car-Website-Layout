@@ -1,0 +1,98 @@
+.row-header {
+    margin:0px auto;
+    padding:0px auto;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.row-content {
+    margin: 0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height: 400px;
+}
+
+body {
+    padding: 50px 0px 0px 0px;
+    z-index:0;
+    background-color: whitesmoke;
+}
+
+.navbar {
+    padding: 10px;
+}
+
+.navbar-dark {
+    background: rgb(187, 0, 0);
+}
+
+.navbar .sign {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.carousel.slide {
+    margin-top:10px;
+}
+
+#menuList {
+    margin-top:10px;
+}
+
+#card-item {
+    margin:30px;
+}
+
+.address {
+    font-size: 80%;
+    margin: 0px;
+    color: #0f0f0f;
+}
+
+.footer {
+    background-color: #100431;
+    margin: 0px auto;
+    padding: 20px 0px 20px 0px;
+    color:white;
+}
+
+h1 , h3{
+    color:#03C03C;
+}
+
+h3 {
+    padding-bottom: 30px;
+}
+
+#socialContact {
+    padding: 10px;
+    margin:2px;
+}
+
+#pageControl {
+    padding: 2px;
+    margin:2px;
+}
+
+.kayan-yazi {
+    margin-top: 3em;
+    background-color: rgb(187, 0, 0);
+    color: white;
+    border-radius: 1em;
+}
+
+#yazi {
+    padding-left: 15em; 
+ }
+
+.top-button-contaier {
+    margin:30px;
+}
+
+.top-btn {
+    padding-left: 50px;
+    padding-right: 50px;
+}
